@@ -9,11 +9,12 @@
 .prime i {
 	margin-left: 20px;
 	vertical-align: middle;
-	    font-size: 20px;
+	font-size: 20px;
 }
 .prime:hover {
-    color: #fff;
+	color: #fff;
 }
+
 /* Checkbox with icons */
 .check-icon {
 	width: 150px;
@@ -49,8 +50,8 @@
 	color: #fff;
 }
 .check-icon input[type="checkbox"]:checked + label::after {
-	font-family: "FontAwesome";
-	content: "\f00c";
+	font-family: "Material Icons";
+	content: "\e5ca";
 }
 
 /* Checkbox with icons */
@@ -60,6 +61,7 @@
 .checklist-icon div {
 	background-color: #C9C9C9;
 	padding: 10px 15px 15px 15px;
+	line-height: 34px;
 }
 .checklist-icon label {
 	display: inline-block;
@@ -76,20 +78,39 @@
 .checklist-icon input[type="checkbox"]:checked + div label {
 	background-color: #fff;
 	border: none;
+	margin-bottom: 5px;
 }
 .checklist-icon label::after {
 	display: inline-block;
 	position: relative;
 	width: 16px;
 	height: 16px;
-	left: 1px;
-	top: 0px;
+    left: 2px;
+    top: -3px;
 	font-size: 21px;
 	color: #E22963;
 }
 .checklist-icon input[type="checkbox"]:checked + div label::after {
-	font-family: "FontAwesome";
-	content: "\f00c";
+	font-family: "Material Icons";
+	content: "\e5ca";
+}
+
+/* Checkbox with ic icon class */
+.ic label {
+	content: none;
+	border: none;
+	height: auto;
+	width: auto;
+}
+.ic input[type="checkbox"]:checked + label::after {
+	content: none;
+}
+.ic input[type="checkbox"]:checked + label {
+	color: #E22963;
+	background: none;
+}
+.ic i {
+	font-size: 38px;
 }
 
 /* Radio with icons */
@@ -323,6 +344,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 	opacity: 0;
 	filter: alpha(opacity=0);
 }
+
+/* Numeric spinner */
 .spinner {
 	background: #EBEBEB;
 	border-radius: 33px;
@@ -338,4 +361,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 	float: left;
 	width: 65%;
 	border: none;
+}
+.spinner input[type=text]:focus:not([readonly]) {
+	border-bottom: none;
+	box-shadow: none;
 }
