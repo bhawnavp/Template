@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="assets/css/selectize.default.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body class="wizard-real-time">
+    <div class="main" style="margin-top: 3%;margin-left: 12%; margin-bottom: 20%">
+      <button type="button" class="btn prime">Large button <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <br/><br/><hr/>
+      <button type="button" class="btn btn-lg prime">Large button <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <br/><br/><hr/>
+      <label class="check-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="check1">
+        <label for="check1"> </label> Android
+      </label>
+      <label class="check-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="check2">
+        <label for="check2"> </label> Android
+      </label>
+      <label class="check-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="check3">
+        <label for="check3"> </label> Android
+      </label>
+      <label class="check-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="check4">
+        <label for="check4"> </label> Android
+      </label>
+      <br/><br/><hr/>
+      <label class="radio-icon">
+        <input type="radio" value="Value1 " name="radiobox1" id="radio1">
+        <label for="radio1"> </label> Android
+      </label>
+      <label class="radio-icon">
+        <input type="radio" value="Value1 " name="radiobox1" id="radio2">
+        <label for="radio2"> </label> Android
+      </label>
+      <label class="radio-icon">
+        <input type="radio" value="Value1 " name="radiobox1" id="radio3">
+        <label for="radio3"> </label> Android
+      </label>
+      <label class="radio-icon">
+        <input type="radio" value="Value1 " name="radiobox1" id="radio4">
+        <label for="radio4"> </label> Android
+      </label>
+      <br/><br/><hr/>
+      <div class="switch">
+        <label>
+          Off
+          <input type="checkbox">
+          <span class="lever"></span>
+          On
+        </label>
+      </div>
+      <br/><br/><hr/>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist1">
+        <div><label for="checklist1"> </label> Android</div>
+      </label>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist2">
+        <div><label for="checklist2"> </label> Android</div>
+      </label>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist3">
+        <div><label for="checklist3"> </label> Android</div>
+      </label>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist4">
+        <div><label for="checklist4"> </label> Android</div>
+      </label>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist5">
+        <div><label for="checklist5"> </label> Android</div>
+      </label>
+      <label class="check-icon checklist-icon">
+        <input type="checkbox" value="Value1 " name="checkbox1" id="checklist6">
+        <div><label for="checklist6"> </label> Android</div>
+      </label>
+      <br/><br/><hr/>
+      <div class="input-field col-md-3">
+        <input id="last_name" type="text">
+      </div>
+      <br/><br/><hr/>
+      <div class="date col-md-3">
+        <input type="text" class="form-control"><span class="input-group-addon input-icon"><i class="glyphicon glyphicon-th"></i></span>
+      </div>
+<br/><br/><hr/>
+
+      <div class="col-md-3">
+        <div class="control-group">
+          <select id="select-beast" class="demo-default" placeholder="Select">
+            <option value="">Select</option>
+            <option value="4">Thomas Edison</option>
+            <option value="1">Nikola</option>
+            <option value="3">Nikola Tesla</option>
+            <option value="5">Arnold Schwarzenegger</option>
+          </select>
+        </div>
+      </div>
+<br/><br/><hr/>
+
+
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/selectize.min.js"></script>
+    <script type="text/javascript">
+      $('.date').datepicker({
+      });
+       $('#select-beast').selectize({
+          create: true,
+          sortField: {
+            field: 'text',
+            direction: 'asc'
+          },
+          dropdownParent: 'body'
+        });
+    </script>
+  </body>
+</html>
