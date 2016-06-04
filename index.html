@@ -5,48 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Template</title>
-    <!-- Bootstrap -->
+    <!-- Bootstrap and dependencies -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="assets/css/selectize.default.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
+    <!-- Icon files -->
     <link href="assets/css/material-icon.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom style -->
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
-  <body class="template-id">
+  <body class="template-divided-canvas">
     <div class="main">
     <header></header>
     <div class="content">
-      <div class="landing-page">
+      <div class="landing-page hide">
         <div class="landing-left"><img src=""></div>
         <div class="landing-right">
-        <h1 class="main-head">Your Heading Goes Here</h1>
-        <h2 class="sub-head">Optional Subheading</h2>
-        <p class="description">Short description of the lorem lorem ipsum dolor sir amer jshd jfh hjhdf jdhfh d dhj isosum fhdj hjhd amet yeko jh loue hsjl</p>
-        <div class="input-element"></div>
-        <div class="prime-action"><button type="button" class="btn btn-primary btn-lg">Large button <i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
-      </div></div>
-      <div class="question-page">
-        <div class="question-head result"></div>
-        <div class="question-subhead"></div>
-        <div class="question-section">
-          <div class="section-head"></div>
-          <div class="section-desc"></div>
-          <div class="question-components"></div>
-          <div class="action"></div>
+          <h1 class="main-head">Your Heading Goes Here</h1>
+          <h2 class="sub-head">Optional Subheading</h2>
+          <p class="description">Short description of the lorem lorem ipsum dolor sir amer jshd jfh hjhdf jdhfh d dhj isosum fhdj hjhd amet yeko jh loue hsjl</p>
+          <div class="input-element"></div>
+          <div class="prime-action"><button type="button" class="btn btn-primary btn-lg">Large button <i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+        </div></div>
+        <div class="question-page">
+          <div class="question-head"><div class="pull-left col-md-12">logo</div></div>
+          <div class="question-subhead"></div>
+          <div class="question-section">
+            <div class="col-md-6 right-section text-center">
+              <div class="section-head">This is a question with a numeric textbox and probably a long question with maybe two lines of text?</div>
+              <div class="section-desc">Small optional help text to describe the question further</div>
+              <div class="question-components">
+                <div class="col-md-4 col-md-offset-4">
+                  <div class="date">
+                    <input type="text" class="form-control"><span class="input-group-addon input-icon"><i class="material-icons">event</i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="action"><button type="button" class="btn prime"><i class="material-icons">arrow_backward</i>Prev </button>
+              <button type="button" class="btn prime">Next <i class="material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <div class="col-md-6 left-section">
+              <div class="result-left">
+                <div class="result-title"></div>
+                <div class="result-amount"></div>
+                <div class="result-carousal"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result-page">
+          <div class="result-head"></div>
+          <div class="result-subhead"></div>
+          <div class="result"></div>
+          <div class="result-description"></div>
+          <div class="result-action"></div>
         </div>
       </div>
-      <div class="result-page">
-        <div class="result-head"></div>
-        <div class="result-subhead"></div>
-        <div class="result"></div>
-        <div class="result-description"></div>
-        <div class="result-action"></div>
-      </div>
-    </div>
-  <footer></footer>
-</div>
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
+    <footer></footer>
+  </div>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/bootstrap-slider.min.js"></script>
+  <script src="assets/js/selectize.min.js"></script>
+  <script type="text/javascript">
+  $('.date').datepicker({});
+  $('#select-beast').selectize({
+  create: true,
+  sortField: {
+  field: 'text',
+  direction: 'asc'
+  },
+  dropdownParent: 'body'
+  });
+  $('#ex1').slider({
+  formatter: function(value) {
+  return 'Current value: ' + value;
+  }
+  });
+  $("#ex2").slider({});
+  $("#ex13").slider({
+  ticks: [0, 100, 200, 300, 400],
+  ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
+  ticks_snap_bounds: 30
+  });
+  (function ($) {
+  $('.spinner .btn:first-of-type').on('click', function() {
+  $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+  });
+  $('.spinner .btn:last-of-type').on('click', function() {
+  $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+  });
+  })(jQuery);
+  </script>
 </body>
 </html>
