@@ -35,6 +35,7 @@ Components style
     width: 165px;
     font-size: 18px;
     margin: 0px 15px;
+    position: relative;
 }
 
 .btn.prime i {
@@ -46,9 +47,38 @@ Components style
 .btn.prime:active {
     color: #fff;
     outline: none;
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+}
+.btn-lg.prime{
+	width:300px;
+	    font-size: 24px;;
+}
+.ripple{
+  overflow:hidden;
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+
+    
+  animation: ripple-animation 2s;
 }
 
 
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}
 /* Checkbox with icons */
 
 .check-icon {
@@ -97,10 +127,12 @@ Components style
 
 .checklist-icon {
     text-align: left;
+    width: 30%;
+    margin: 6px 2%;
 }
 
 .checklist-icon div {
-    background-color: #C9C9C9;
+    background-color: #Ccc;
     padding: 10px 15px 15px 15px;
     line-height: 34px;
 }
@@ -112,11 +144,13 @@ Components style
     border: 3px solid #767676;
     position: relative;
     top: 8px;
+    margin: 0px 10px 0px 0px;
 }
 
 .check-icon input[type="checkbox"]:checked + div {
     background-color: #E22963;
     border: none;
+    color: #fff;
 }
 
 .checklist-icon input[type="checkbox"]:checked + div label {
@@ -134,6 +168,7 @@ Components style
     top: -3px;
     font-size: 21px;
     color: #E22963;
+        font-weight: 700;
 }
 
 .checklist-icon input[type="checkbox"]:checked + div label::after {
@@ -220,6 +255,7 @@ width: 18px;
 
 .switch label {
     cursor: pointer;
+        margin-bottom: 15px;
 }
 
 .switch label input[type=checkbox] {
@@ -242,9 +278,9 @@ width: 18px;
     display: inline-block;
     position: relative;
     width: 80px;
-    height: 35px;
+    height: 41px;
     border: 3px solid #818181;
-    border-radius: 18px;
+    border-radius: 25px;
     margin-right: 10px;
     transition: background 0.3s ease;
     vertical-align: middle;
@@ -255,18 +291,18 @@ width: 18px;
     content: "";
     position: absolute;
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 25px;
+    height: 25px;
     background-color: #818181;
     border-radius: 21px;
     left: 7px;
-    top: 4px;
+    top: 5px;
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: #E22963;
-    left: 49px;
+    left: 43px;
 }
 
 
@@ -436,22 +472,24 @@ textarea.materialize-textarea:focus:not([readonly]) {
     background-color: #fff;
     background-image: none;
     box-shadow: none;
-    border: 6px solid #000000;
+    border: 6px solid #333;
 }
 
 .tooltip-inner {
     padding: 10px 15px;
     font-size: 15px;
-    background-color: #000;
+    background-color: #E22962;
     border-radius: 35px;
 }
-
+.tooltip.top .tooltip-arrow {
+    border-top-color: #E22962;
+}
 .slider .tooltip.top {
     margin-top: -56px;
 }
 
 .slider.slider-horizontal {
-    width: 750px;
+    width: 70%;
 }
 
 .slider.slider-horizontal .slider-track {
@@ -475,7 +513,15 @@ textarea.materialize-textarea:focus:not([readonly]) {
     background-image: none;
     background-color: pink;
 }
-
+.range{
+    font-size: 18px;
+    position: relative;
+    top: 29px;
+    right: -41px;
+}
+.range-max{
+    right: 60px;
+	}
 
 /*File Upload*/
 
@@ -557,8 +603,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /***************************
 Theme style
 ***************************/
-
-.left-section {
+.template-divided-canvas label{
+	font-weight:normal;
+}
+.right-section {
     background: #30B6D1;
     display: table;
 }
@@ -568,7 +616,7 @@ Theme style
     padding: 20px 0px 50px 0px;
 }
 
-.template-divided-canvas .left-section {
+.template-divided-canvas .right-section {
     min-height: 100vh;
     color: #fff;
 }
@@ -586,7 +634,7 @@ Theme style
     margin-bottom: 80px;
 }
 
-.right-section {
+.left-section {
     min-height: 100vh;
     font-family: 'raleway-med';
     padding: 0px 45px;
@@ -594,7 +642,8 @@ Theme style
 
 .template-divided-canvas .question-components {
     margin-bottom: 150px;
-    display: flex;
+        width: 100%;
+    display: inline-block;
 }
 
 .result-title {
@@ -629,4 +678,53 @@ Theme style
 .result-carousal {
     font-family: 'raleway-med';
     font-size: 18px;
+}
+.feature-label{
+	text-align:right;
+	font-size:18px;
+	line-height:34px;
+	    margin-right: 80px;
+}
+.center{
+	display: table-cell;
+    vertical-align: middle;
+}
+.center img{
+	margin:0 auto;
+}
+.sub-head{
+	font-size:24px;
+	    margin-bottom: 25px;
+}
+.description{
+    padding: 0% 13% 70px 13%;
+}
+.landing-page .left-section{
+	    display: table;
+}
+ul{
+	    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+	color:#333;
+}
+a:hover, a:focus, a:active{
+	text-decoration:none;
+	color:#333;
+}
+.question-footer li {
+    float: left;
+    margin-right: 30px;
+}
+.question-footer {
+position:fixed;
+   bottom:0px;
+   height:30px;
+}
+.question-footer li:after {
+    content: "-";
+    position: relative;
+    left: 15px;
 }
