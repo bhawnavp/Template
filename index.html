@@ -264,6 +264,15 @@ with a long question
 								<div class="question">This a question with a numeric textbox a long question
 with a long question
 								</div>
+								<div class="answer">Tenesse</div><div class="question">This a question with a numeric textbox a long question
+with a long question
+								</div>
+								<div class="answer">Tenesse</div><div class="question">This a question with a numeric textbox a long question
+with a long question
+								</div>
+								<div class="answer">Tenesse</div><div class="question">This a question with a numeric textbox a long question
+with a long question
+								</div>
 								<div class="answer">Tenesse</div>
 							</div>
 							</div>
@@ -282,9 +291,10 @@ with a long question
         <footer></footer>
     </div>
     <!-- jQuery -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+	
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/bootstrap-slider.min.js"></script>
@@ -381,6 +391,7 @@ with a long question
 $('.answer-panel').slimScroll({
         height: '250px'
     });
+	$('.slimScrollDiv').css({'overflow': '', 'float':'left'});
     (function($) {
         $('.spinner .btn:first-of-type').on('click', function() {
             $('.spinner input').val(parseInt($('.spinner input').val(), 10) + 1);
