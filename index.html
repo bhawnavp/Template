@@ -322,7 +322,7 @@ with a long question
         $('.prev-step').removeClass('hide');
 
         // For Hiding the current slide
-        $('*[data-slide="' + step_no + '"]').addClass('hide');
+        $('*[data-slide="' + step_no + '"]').siblings('div[class*="slide"]').addClass('hide');
         step_no++;
 
         // For Showing the slide of next step
@@ -332,7 +332,7 @@ with a long question
         $('*[data-question="' + step_no + '"]').addClass('active').siblings().removeClass('active');
     });
     $(document).on('click', '.prev-step', function(e) {
-        $('*[data-slide="' + step_no + '"]').addClass('hide');
+        $('*[data-slide="' + step_no + '"]').siblings('div[class*="slide"]').addClass('hide');
         //console.log(step_no);
         step_no--;
         if (step_no == 1) {
@@ -357,7 +357,7 @@ with a long question
           btnOffset = $(this).offset(),
             xPos = event.pageX - btnOffset.left,
             yPos = event.pageY - btnOffset.top;
-      
+
 
       
       $div.addClass('ripple-effect');
@@ -372,6 +372,7 @@ with a long question
           background: $(this).data("ripple-color")
         }) 
         .appendTo($(this));
+
 
       window.setTimeout(function(){
         $div.remove();
